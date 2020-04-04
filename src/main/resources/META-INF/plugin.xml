@@ -1,0 +1,30 @@
+<idea-plugin>
+    <id>ru.hse.spb.sharkova.printfile.printfileIdea</id>
+    <name>printfile</name>
+    <vendor email="sharkovadarya@gmail.com">Darya Sharkova</vendor>
+
+    <description><![CDATA[
+    This IDEA plugin launches the Gradle `printfile` plugin
+    which accepts a filename and prints it content with specified lines skipped.
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="ru.hse.spb.sharkova.printfile.actions.PrintFileAction"
+                class="ru.hse.spb.sharkova.printfile.actions.PrintFileAction" text="Print File Action"
+                description="Launches a Gradle plugin that accepts a file name and prints the file content with specified lines skipped.">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+        <action id="RunGradlePrintfileAction"
+                class="ru.hse.spb.sharkova.printfile.actions.RunGradlePrintfileAction" text="Run Gradle Printfile"
+                description="Runs a Gradle printfile task."/>
+    </actions>
+</idea-plugin>
