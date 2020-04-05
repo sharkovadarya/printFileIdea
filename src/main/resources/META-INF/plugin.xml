@@ -23,8 +23,5 @@
                 description="Launches a Gradle plugin that accepts a file name and prints the file content with specified lines skipped.">
             <add-to-group group-id="ToolsMenu" anchor="last"/>
         </action>
-        <action id="RunGradlePrintfileAction"
-                class="ru.hse.spb.sharkova.printfile.actions.RunGradlePrintfileAction" text="Run Gradle Printfile"
-                description="Runs a Gradle printfile task."/>
     </actions>
 </idea-plugin>
